@@ -1,0 +1,13 @@
+:root{--font-scale:1}
+html{font-size:calc(16px * var(--font-scale))}
+body.dark{--bg:#0b110e;--ink:#f5fff8;--muted:#a5b5aa;--cream:#121b16;--white:#111914;--soft:#173c28;--line:#284333}
+body.dark .option,body.dark .chip,body.dark .btn.light,body.dark .stat.light,body.dark .error-item{background:#152019;color:#f5fff8}
+body.dark .option.correct{background:#174d2d}body.dark .option.wrong{background:#502323}
+.settings{position:fixed;right:16px;bottom:18px;z-index:29;display:flex;gap:7px;background:#111;padding:7px;border-radius:999px;box-shadow:0 8px 25px #0004}
+.settings button{border:0;background:#ffffff15;color:#fff;border-radius:50%;width:38px;height:38px;font:700 14px inherit;cursor:pointer}.settings button:hover{background:var(--green)}
+.theory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.theory-card h3{font-size:25px;margin:0 0 12px}.formula{background:var(--soft);border-radius:14px;padding:12px;margin:9px 0;font-weight:650}.level{display:inline-flex;padding:5px 9px;border-radius:99px;background:var(--soft);color:var(--green2);font-size:12px;font-weight:800;margin-bottom:12px}
+.history-table{width:100%;border-collapse:collapse}.history-table th,.history-table td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}.history-table th{color:var(--muted);font-size:13px;text-transform:uppercase}
+.exam-warning{background:#fff1c7;color:#6b4b00;border-radius:14px;padding:12px;margin-bottom:12px;font-weight:700}.unanswered{color:#b13737;font-weight:700}
+.confetti{position:fixed;width:10px;height:16px;top:-20px;z-index:99;animation:fall 2.8s linear forwards}@keyframes fall{to{transform:translate(var(--drift),110vh) rotate(720deg);opacity:.8}}
+.offline-badge{display:inline-flex;gap:6px;align-items:center;font-size:12px;font-weight:700;color:var(--green2);margin-top:10px}.offline-badge:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+@media(max-width:900px){.theory-grid{grid-template-columns:1fr}.bottomnav{grid-template-columns:repeat(6,1fr)}}@media(max-width:600px){.settings{right:12px;bottom:82px}.history-table{font-size:13px}.history-table th,.history-table td{padding:9px 6px}}
